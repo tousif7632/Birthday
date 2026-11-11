@@ -1,0 +1,322 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="theme-color" content="#100817">
+<meta name="description" content="A romantic birthday love letter and celebration page for your princess, designed to be easy to deploy on Vercel.">
+<meta property="og:title" content="For My Princess — Happy Birthday ❤️">
+<meta property="og:description" content="A beautiful birthday page made with love.">
+<meta property="og:type" content="website">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<title>For My Princess — Happy Birthday ❤️</title>
+<style>
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:ital,wght@0,600;0,700;1,600;1,700&display=swap');
+:root{--pink:#ff6fae;--pink2:#ffc1dc;--cream:#fff3f8;--gold:#ffe2a1;--bg:#100817}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;min-height:100vh;overflow-x:hidden;background:radial-gradient(ellipse at 50% 0%,#51244f 0%,#24122e 37%,#100817 78%);color:var(--cream);font-family:'DM Sans',sans-serif}
+body:before{content:"";position:fixed;inset:0;pointer-events:none;opacity:.55;background-image:radial-gradient(1.5px 1.5px at 12% 22%,#fff 50%,transparent 60%),radial-gradient(2px 2px at 76% 18%,#ffd8ec 50%,transparent 60%),radial-gradient(1px 1px at 88% 72%,#fff 50%,transparent 60%),radial-gradient(2px 2px at 29% 81%,#fff 50%,transparent 60%);background-size:190px 190px,250px 250px,290px 290px,220px 220px;animation:stars 7s ease-in-out infinite alternate}
+@keyframes stars{to{opacity:.2;transform:translateY(-10px)}}
+.wrap{position:relative;z-index:1;width:min(100% - 32px,900px);margin:auto;padding:48px 0 70px;text-align:center}
+.pill{display:inline-flex;align-items:center;gap:9px;border:1px solid #ffffff28;background:#ffffff0c;border-radius:99px;padding:9px 15px;color:#ffd2e5;font-size:11px;letter-spacing:2.3px;text-transform:uppercase;backdrop-filter:blur(12px)}
+.pulse{width:7px;height:7px;background:#ff78b4;border-radius:50%;box-shadow:0 0 12px #ff78b4}
+h1{font:700 clamp(3.2rem,10vw,6.7rem)/.98 'Playfair Display',Georgia,serif;letter-spacing:-2px;margin:26px 0 15px;text-shadow:0 5px 35px #ff4d9b55}
+h1 span{display:block;font-style:italic;color:#ffacd0;text-shadow:0 0 32px #ff5b9f88}
+.sub{max-width:590px;margin:0 auto;color:#ead9e8;font-size:15px;line-height:1.8}
+.scene{height:330px;display:grid;place-items:center;perspective:1100px;position:relative;margin:8px auto 0}
+.aura{position:absolute;width:310px;height:115px;bottom:45px;border-radius:50%;background:#ff4f9d;filter:blur(55px);opacity:.32}
+.cake{position:relative;width:240px;height:220px;transform-style:preserve-3d;animation:levitate 5s ease-in-out infinite}
+@keyframes levitate{0%,100%{transform:translateY(2px) rotateX(5deg) rotateY(-12deg)}50%{transform:translateY(-14px) rotateX(-2deg) rotateY(12deg)}}
+.plate{position:absolute;bottom:6px;left:0;width:240px;height:31px;border-radius:50%;background:linear-gradient(#fff,#e5c6db 48%,#a978a4);transform:rotateX(65deg);box-shadow:0 17px 28px #0008}
+.tier{position:absolute;border-radius:15px 15px 23px 23px;box-shadow:inset -14px 0 20px #a02c6744,inset 9px 0 15px #fff5}
+.tier.one{left:19px;bottom:27px;width:202px;height:79px;background:linear-gradient(90deg,#ee5c9b,#ffc0dc 48%,#db4389)}
+.tier.two{left:35px;bottom:94px;width:170px;height:67px;background:linear-gradient(90deg,#ff9dc5,#ffe1ed 48%,#f36ca8)}
+.frosting{position:absolute;left:35px;bottom:140px;width:170px;height:29px;border-radius:50%;background:linear-gradient(#fff,#ffd6e7);box-shadow:0 5px 10px #9d326a55}
+.drip{position:absolute;top:15px;width:17px;height:25px;background:#ffd6e7;border-radius:0 0 12px 12px}
+.drip:nth-child(1){left:24px;height:30px}.drip:nth-child(2){left:69px;height:21px}.drip:nth-child(3){left:125px;height:28px}
+.candle{position:absolute;left:114px;bottom:158px;width:13px;height:49px;border-radius:5px;background:repeating-linear-gradient(135deg,#fff 0 7px,#ff6fae 7px 14px);box-shadow:0 0 10px #fff8}
+.flame{position:absolute;left:111px;bottom:203px;width:19px;height:28px;border-radius:50% 50% 50% 0;transform:rotate(-45deg);background:radial-gradient(circle at 65% 65%,#fff 0 12%,#fff3a6 27%,#ff9b38 58%,#ff4b65 82%);filter:drop-shadow(0 0 13px #ffbd5c);animation:flicker .75s infinite alternate}
+@keyframes flicker{to{transform:rotate(-40deg) scale(.84);filter:drop-shadow(0 0 20px #ffd36a)}}
+.berries{position:absolute;left:78px;bottom:151px;width:17px;height:17px;border-radius:50%;background:#b91655;box-shadow:38px -5px #b91655,77px 1px #b91655}
+.spark{position:absolute;color:#ffe2a1;font-size:24px;animation:spin 8s linear infinite}
+.s1{top:48px;left:12%}.s2{top:95px;right:13%;animation-direction:reverse}.s3{bottom:45px;right:19%;font-size:17px}
+@keyframes spin{to{transform:rotate(360deg)}}
+.langbar{display:flex;justify-content:center;margin:22px 0 0}.langbtn{border:1px solid #ffffff45;background:#ffffff12;color:#ffe1ef;border-radius:999px;padding:10px 17px;font:600 12px 'DM Sans',sans-serif;cursor:pointer;letter-spacing:.4px}.actions{display:flex;justify-content:center;gap:13px;flex-wrap:wrap;margin:16px 0 20px}
+.music-wrap{display:flex;justify-content:center;align-items:center;margin:18px auto 0}
+button{font:600 13px 'DM Sans',sans-serif;cursor:pointer;border-radius:999px;padding:15px 23px;transition:transform .25s,box-shadow .25s}
+.primary{border:0;color:#351126;background:linear-gradient(135deg,#ffe0ec,#ff8fbd);box-shadow:0 9px 30px #ff6fae44}
+.secondary{border:1px solid #ffffff42;color:#fff;background:#ffffff0c;backdrop-filter:blur(10px)}
+.music-button{padding:12px 18px;background:linear-gradient(135deg,#fef3f9,#ffd7eb);color:#481d34;border:0;box-shadow:0 10px 26px rgba(255,128,183,.28)}
+.surprise-button{padding:16px 26px;background:linear-gradient(135deg,#fff0f5,#ff9bbd 55%,#ff6b91);color:#3d1126;border:0;box-shadow:0 12px 32px rgba(255,65,112,.35);font-size:14px;letter-spacing:.6px;animation:buttonGlow 2.8s ease-in-out infinite}
+@keyframes buttonGlow{50%{box-shadow:0 12px 38px rgba(255,45,103,.58)}}
+button:hover{transform:translateY(-3px);box-shadow:0 13px 35px #ff6fae55}
+.panel{display:none;max-width:650px;margin:28px auto 0;padding:clamp(24px,5vw,38px);border:1px solid #ffffff25;border-radius:26px;background:linear-gradient(145deg,#ffffff18,#ffffff08);box-shadow:0 24px 70px #0005;backdrop-filter:blur(16px);animation:show .65s ease}
+.surprise-overlay{position:fixed;inset:0;background:rgba(17,10,20,.72);display:flex;align-items:center;justify-content:center;opacity:0;pointer-events:none;transition:opacity .4s ease;z-index:100}
+.surprise-overlay.show{opacity:1;pointer-events:auto}
+.surprise-box{position:relative;display:flex;align-items:center;justify-content:center;flex-direction:column;width:min(88vw,520px);padding:26px 22px;border-radius:28px;background:linear-gradient(145deg, rgba(255,255,255,.18), rgba(255,255,255,.05));border:1px solid rgba(255,255,255,.18);backdrop-filter:blur(14px);text-align:center;transform:scale(.7);transition:transform .5s ease}
+.surprise-overlay.show .surprise-box{transform:scale(1)}
+.surprise-stage{position:relative;width:min(74vw,420px);height:460px;margin:20px auto 0;isolation:isolate}
+.surprise-stage::before{content:"";position:absolute;z-index:0;left:50%;top:44%;width:260px;height:260px;border-radius:50%;background:radial-gradient(circle,rgba(255,25,76,.38),rgba(255,91,138,.12) 48%,transparent 72%);transform:translate(-50%,-50%);animation:heartAura 2s ease-in-out infinite}
+@keyframes heartAura{50%{opacity:.55;transform:translate(-50%,-50%) scale(1.2)}}
+.heart-burst{position:absolute;inset:0;z-index:2;display:grid;place-items:center;overflow:visible;filter:drop-shadow(0 0 24px rgba(255,111,174,.65))}
+.heart-burst::before,.heart-burst::after{content:"❤";position:absolute;inset:0;display:grid;place-items:center;font-size:260px;background:linear-gradient(145deg,#ff758f 8%,#ed1746 48%,#a9002d 100%);background-clip:text;-webkit-background-clip:text;color:transparent;-webkit-text-fill-color:transparent;text-shadow:0 9px 22px rgba(142,0,38,.22);animation:beat 1s infinite alternate}
+.heart-burst::before{clip-path:inset(0 50% 0 0)}
+.heart-burst::after{clip-path:inset(0 0 0 50%);animation-delay:.2s}
+.heart-burst.open::before{animation:heartBreakLeft 1.25s cubic-bezier(.2,.8,.2,1) forwards}
+.heart-burst.open::after{animation:heartBreakRight 1.25s cubic-bezier(.2,.8,.2,1) forwards}
+@keyframes beat{0%{transform:scale(.9)}100%{transform:scale(1.08)}}
+@keyframes heartBreakLeft{0%{transform:translateX(0) rotate(0) scale(1.08);opacity:1}35%{transform:translateX(-12px) rotate(-8deg) scale(1.2);opacity:1}100%{transform:translateX(-220px) rotate(-30deg) scale(.8);opacity:0}}
+@keyframes heartBreakRight{0%{transform:translateX(0) rotate(0) scale(1.08);opacity:1}35%{transform:translateX(12px) rotate(8deg) scale(1.2);opacity:1}100%{transform:translateX(220px) rotate(30deg) scale(.8);opacity:0}}
+.surprise-text{margin:8px 0 0;font-size:19px;color:#fff4f8;letter-spacing:.3px}
+.photo-reveal{position:absolute;inset:0;z-index:1;border-radius:26px;overflow:hidden;opacity:0;transform:scale(.12);transition:opacity .45s ease,transform .9s cubic-bezier(.16,1,.3,1);box-shadow:0 20px 45px rgba(0,0,0,.3)}
+.photo-reveal.visible{opacity:1;transform:scale(1)}
+.photo-reveal.visible::after{content:"";position:absolute;inset:-40% auto -40% -70%;width:45%;pointer-events:none;background:linear-gradient(90deg,transparent,rgba(255,255,255,.55),transparent);transform:rotate(18deg);animation:photoShine 1.2s .35s ease-out forwards}
+@keyframes photoShine{to{left:130%}}
+.photo-reveal img{width:100%;display:block;height:calc(100% - 52px);object-fit:cover}
+.photo-caption{padding:14px 18px;background:linear-gradient(180deg,#ffe7f3,#fff);color:#412038;font-weight:700;font-size:16px;text-align:center}
+.burst-dot{position:absolute;width:10px;height:10px;border-radius:50%;background:rgba(255,255,255,.9);pointer-events:none;animation:floatUp 1.3s ease-in forwards}
+@keyframes floatUp{0%{transform:translate(0,0) scale(1);opacity:1}100%{transform:translate(var(--dx), var(--dy)) scale(.2);opacity:0}}
+
+@media (max-width: 520px) {
+  .surprise-box{padding:22px 16px}
+  .surprise-stage{height:340px}
+  .surprise-stage::before{width:205px;height:205px}
+  .heart-burst::before,.heart-burst::after{font-size:205px}
+  @keyframes heartBreakLeft{0%{transform:translateX(0) rotate(0) scale(1.08);opacity:1}35%{transform:translateX(-10px) rotate(-8deg) scale(1.2);opacity:1}100%{transform:translateX(-150px) rotate(-30deg) scale(.8);opacity:0}}
+  @keyframes heartBreakRight{0%{transform:translateX(0) rotate(0) scale(1.08);opacity:1}35%{transform:translateX(10px) rotate(8deg) scale(1.2);opacity:1}100%{transform:translateX(150px) rotate(30deg) scale(.8);opacity:0}}
+}
+@media(prefers-reduced-motion:reduce){
+  *,*::before,*::after{scroll-behavior:auto!important;animation-duration:.01ms!important;animation-iteration-count:1!important;transition-duration:.01ms!important}
+}
+.panel.open{display:block}
+@keyframes show{from{opacity:0;transform:translateY(18px) scale(.97)}to{opacity:1;transform:none}}
+.panel h2{font:600 clamp(1.7rem,5vw,2.4rem) 'Playfair Display',serif;color:#ffb6d3;margin:0 0 17px}
+.panel p{font-size:15px;line-height:2;color:#f7eaf1;margin:0;white-space:pre-line}
+.sign{font:italic 1.35rem 'Playfair Display',serif;color:#ffacd0;margin-top:22px}
+.footer{margin-top:58px;color:#bca9c1;font-size:10px;letter-spacing:3px;text-transform:uppercase}
+.float{position:fixed;bottom:-35px;pointer-events:none;z-index:5;animation:rise linear forwards;filter:drop-shadow(0 0 8px #ff70ae)}
+@keyframes rise{to{transform:translateY(-115vh) rotate(360deg);opacity:0}}
+@media(max-width:520px){.wrap{padding-top:35px}.scene{height:290px;transform:scale(.92);margin:-3px auto}.sub{font-size:14px}.actions{gap:9px}button{padding:14px 18px}.footer{margin-top:45px}}
+</style>
+</head>
+<body>
+<main class="wrap">
+  <div class="pill"><i class="pulse"></i> A little universe made just for you</div>
+  <h1>Happy Birthday <span>Princess</span></h1>
+  <p class="sub">If I could gift you one thing today, it would be the ability to see yourself through my eyes — so you would know how truly special you are. ❤️</p>
+
+  <div class="scene" aria-label="Floating 3D-style birthday cake with a glowing candle">
+    <span class="spark s1">✧</span><span class="spark s2">✦</span><span class="spark s3">✧</span>
+    <div class="aura"></div>
+    <div class="cake">
+      <div class="plate"></div><div class="tier one"></div><div class="tier two"></div>
+      <div class="frosting"><i class="drip"></i><i class="drip"></i><i class="drip"></i></div>
+      <div class="berries"></div><div class="candle"></div><div class="flame"></div>
+    </div>
+  </div>
+
+  <div class="langbar"><button class="langbtn" id="langToggle" type="button" onclick="toggleLanguage()" aria-label="Switch language">اردو میں پڑھیں · Read in Urdu</button></div>
+  <div class="music-wrap">
+    <button class="music-button" id="musicToggle" type="button" aria-label="Toggle background music">🎵 Salma Madam Music: Off</button>
+  </div>
+  <div class="actions">
+    <button class="surprise-button" id="surpriseBtn" type="button">💖 Click my sweet heart</button>
+    <button class="primary" id="letterBtn" type="button" onclick="showPanel('letter')">💌 Open your little love letter</button>
+    <button class="secondary" id="wishBtn" type="button" onclick="showPanel('wish')">✨ Make a birthday wish</button>
+  </div>
+
+  <audio id="bgMusic" loop preload="auto" aria-label="Background music">
+    <source src="leberch-happy-birthday-581704%20(1).mp3" type="audio/mpeg">
+  </audio>
+
+  <div class="surprise-overlay" id="surpriseOverlay" aria-live="polite">
+    <div class="surprise-box">
+      <div class="surprise-stage">
+        <div class="photo-reveal" id="photoReveal">
+          <img src="salma.jpeg" alt="Birthday portrait" loading="lazy" decoding="async">
+          <div class="photo-caption">Happy Birthday, My Sweet Heart ❤️</div>
+        </div>
+        <div class="heart-burst" id="heartBurst" aria-hidden="true"></div>
+      </div>
+      <div class="surprise-text">Opening your little surprise…</div>
+    </div>
+  </div>
+
+  <section class="panel" id="letter">
+    <h2>To my beautiful Princess ❤️</h2>
+    <p>
+      Happy Birthday, my Princess! 💗<br><br>
+      I may not have the perfect words to describe what you mean to me, but I hope you always feel how special you are. Your smile can turn an ordinary day into something beautiful, and your presence makes my world a little brighter.<br><br>
+      On your birthday, I wish you endless happiness, good health, beautiful surprises, and every dream your heart is holding. Never stop smiling, never doubt your worth, and always remember that you deserve the very best this world has to offer.<br><br>
+      If I could make one wish today, it would be to see you happy — today, tomorrow, and in all the days ahead. Keep shining, my Princess. You are one of my favourite reasons to smile. 🥹❤️
+    </p>
+    <div class="sign">With all my love, always 💞</div>
+  </section>
+
+  <section class="panel" id="wish">
+    <h2>Close your eyes, Princess… 🌟</h2>
+    <p>Make a wish and let the universe hear it. May this new chapter bring you magical moments, unexpected joy, and a thousand reasons to smile. Today is all about you. Happy Birthday, my favourite person! 🎂</p>
+    <div class="sign">You deserve the whole universe ✨</div>
+  </section>
+
+  <div class="footer">Created with love · Just for my Princess</div>
+</main>
+<script>
+let isUrdu = false;
+const musicToggle = document.getElementById('musicToggle');
+const bgMusic = document.getElementById('bgMusic');
+
+const translations = {
+  en: {
+    pill: 'A little universe made just for you',
+    subtitle: 'If I could gift you one thing today, it would be the ability to see yourself through my eyes — so you would know how truly special you are. ❤️',
+    letterBtn: '💌 Open your little love letter',
+    wishBtn: '✨ Make a birthday wish',
+    letterTitle: 'To my beautiful Princess ❤️',
+    letter: 'Happy Birthday, my Princess! 💗\n\nI may not have the perfect words to describe what you mean to me, but I hope you always feel how special you are. Your smile can turn an ordinary day into something beautiful, and your presence makes my world a little brighter.\n\nOn your birthday, I wish you endless happiness, good health, beautiful surprises, and every dream your heart is holding. Never stop smiling, never doubt your worth, and always remember that you deserve the very best this world has to offer.\n\nIf I could make one wish today, it would be to see you happy — today, tomorrow, and in all the days ahead. Keep shining, my Princess. You are one of my favourite reasons to smile. 🥹❤️',
+    sign: 'With all my love, always 💞',
+    wishTitle: 'Close your eyes, Princess… 🌟',
+    wish: 'Make a wish and let the universe hear it. May this new chapter bring you magical moments, unexpected joy, and a thousand reasons to smile. Today is all about you. Happy Birthday, my favourite person! 🎂',
+    wishSign: 'You deserve the whole universe ✨',
+    footer: 'Created with love · Just for my Princess',
+    toggle: 'اردو میں پڑھیں · Read in Urdu',
+    musicLabel: '🎵 Salma Madam Music: Off',
+    musicLabelOn: '🎵 Salma Madam Music: On'
+  },
+  ur: {
+    pill: 'صرف تمہارے لیے ایک چھوٹی سی کائنات',
+    subtitle: 'آج اگر میں تمہیں کوئی تحفہ دے سکتا، تو وہ یہ ہوتا کہ تم خود کو میری نظروں سے دیکھ سکو، تاکہ تمہیں اندازہ ہو کہ تم میرے لیے کتنی خاص ہو۔ ❤️',
+    letterBtn: '💌 اپنا محبت بھرا خط کھولو',
+    wishBtn: '✨ اپنی سالگرہ کی دعا مانگو',
+    letterTitle: 'میری پیاری شہزادی کے نام ❤️',
+    letter: 'سالگرہ مبارک ہو، میری شہزادی! 💗\n\nشاید میرے پاس ایسے بہترین الفاظ نہ ہوں جو تمہاری اہمیت بیان کر سکیں، لیکن میری خواہش ہے کہ تم ہمیشہ یہ محسوس کرو کہ تم کتنی خاص ہو۔ تمہاری مسکراہٹ ایک عام دن کو بھی خوبصورت بنا دیتی ہے، اور تمہاری موجودگی میری دنیا کو روشن کر دیتی ہے۔\n\nتمہاری سالگرہ پر میری دعا ہے کہ تمہاری زندگی خوشیوں، اچھی صحت، خوبصورت حیرتوں اور تمہارے ہر خواب کی تکمیل سے بھر جائے۔ ہمیشہ مسکراتی رہو، اپنی قدر کبھی مت بھولو، اور یاد رکھو کہ تم دنیا کی ہر بہترین چیز کی حقدار ہو۔\n\nآج میری بس ایک ہی خواہش ہے کہ تم ہمیشہ خوش رہو، آج بھی، کل بھی اور آنے والے ہر دن میں۔ میری شہزادی، ہمیشہ یونہی چمکتی رہو۔ تم میری مسکراہٹ کی سب سے خوبصورت وجوہات میں سے ایک ہو۔ 🥹❤️',
+    sign: 'ہمیشہ تمہاری محبت کے ساتھ 💞',
+    wishTitle: 'آنکھیں بند کرو، میری شہزادی… 🌟',
+    wish: 'دل سے ایک دعا مانگو اور کائنات پر بھروسا رکھو۔ تمہاری زندگی کا یہ نیا سال جادوئی لمحوں، اچانک ملنے والی خوشیوں اور مسکرانے کی ہزار وجوہات سے بھر جائے۔ آج کا دن صرف تمہارے نام۔ سالگرہ مبارک، میری سب سے پیاری ہستی! 🎂',
+    wishSign: 'تم پوری کائنات کی خوشیوں کی حقدار ہو ✨',
+    footer: 'محبت سے بنایا گیا · صرف میری شہزادی کے لیے',
+    toggle: 'Read in English · انگریزی میں پڑھیں',
+    musicLabel: '🎵 سالما مدام میوزک: بند',
+    musicLabelOn: '🎵 سالما مدام میوزک: آن'
+  }
+};
+
+function updateMusicLabel(isPlaying) {
+  const label = isUrdu ? translations.ur : translations.en;
+  musicToggle.textContent = isPlaying ? label.musicLabelOn : label.musicLabel;
+}
+
+function toggleMusic() {
+  if (bgMusic.paused) {
+    bgMusic.play().then(() => {
+      updateMusicLabel(true);
+    }).catch(() => {
+      updateMusicLabel(false);
+    });
+  } else {
+    bgMusic.pause();
+    updateMusicLabel(false);
+  }
+}
+
+function toggleLanguage() {
+  const key = isUrdu ? 'en' : 'ur';
+  isUrdu = !isUrdu;
+  const t = translations[key];
+
+  document.documentElement.lang = key;
+  document.documentElement.dir = isUrdu ? 'rtl' : 'ltr';
+  document.body.style.fontFamily = isUrdu ? "'Noto Nastaliq Urdu','Noto Naskh Arabic',serif" : "'DM Sans',sans-serif";
+
+  document.querySelector('.pill').lastChild.textContent = ' ' + t.pill;
+  document.querySelector('.sub').textContent = t.subtitle;
+  document.getElementById('letterBtn').textContent = t.letterBtn;
+  document.getElementById('wishBtn').textContent = t.wishBtn;
+  document.querySelector('#letter h2').textContent = t.letterTitle;
+  document.querySelector('#letter p').textContent = t.letter;
+  document.querySelector('#letter .sign').textContent = t.sign;
+  document.querySelector('#wish h2').textContent = t.wishTitle;
+  document.querySelector('#wish p').textContent = t.wish;
+  document.querySelector('#wish .sign').textContent = t.wishSign;
+  document.querySelector('.footer').textContent = t.footer;
+  document.getElementById('langToggle').textContent = t.toggle;
+  updateMusicLabel(!bgMusic.paused);
+}
+
+function showPanel(id) {
+  document.querySelectorAll('.panel').forEach((p) => p.classList.remove('open'));
+  const panel = document.getElementById(id);
+  panel.classList.add('open');
+  panel.scrollIntoView({ behavior: 'smooth', block: 'center' });
+  hearts(24);
+}
+
+function hearts(count = 5) {
+  const symbols = ['♥', '♡', '✦', '💗', '🌸'];
+  for (let i = 0; i < count; i += 1) {
+    const el = document.createElement('span');
+    el.className = 'float';
+    el.textContent = symbols[Math.floor(Math.random() * symbols.length)];
+    el.style.left = Math.random() * 100 + 'vw';
+    el.style.fontSize = (13 + Math.random() * 23) + 'px';
+    el.style.animationDuration = (3.5 + Math.random() * 3) + 's';
+    document.body.appendChild(el);
+    setTimeout(() => el.remove(), 7000);
+  }
+}
+
+const surpriseBtn = document.getElementById('surpriseBtn');
+const surpriseOverlay = document.getElementById('surpriseOverlay');
+const photoReveal = document.getElementById('photoReveal');
+const heartBurst = document.getElementById('heartBurst');
+
+function triggerSurprise() {
+  if (surpriseOverlay.classList.contains('show')) return;
+
+  surpriseOverlay.classList.add('show');
+  photoReveal.classList.remove('visible');
+
+  if (bgMusic.paused) {
+    bgMusic.play().catch(() => {});
+  }
+  updateMusicLabel(true);
+
+  for (let i = 0; i < 32; i += 1) {
+    const dot = document.createElement('span');
+    dot.className = 'burst-dot';
+    const angle = (Math.PI * 2 * i) / 32;
+    const radius = 70 + Math.random() * 55;
+    dot.style.left = '50%';
+    dot.style.top = '50%';
+    dot.style.setProperty('--dx', `${Math.cos(angle) * radius}px`);
+    dot.style.setProperty('--dy', `${Math.sin(angle) * radius}px`);
+    dot.style.background = ['#ffd7eb', '#fff6ff', '#ffb8d8', '#ffc4d4'][Math.floor(Math.random() * 4)];
+    heartBurst.appendChild(dot);
+    setTimeout(() => dot.remove(), 1300);
+  }
+
+  setTimeout(() => {
+    photoReveal.classList.add('visible');
+    heartBurst.classList.add('open');
+    const textNode = surpriseOverlay.querySelector('.surprise-text');
+    if (textNode) textNode.textContent = 'Happy Birthday, My Sweet Heart!';
+  }, 5000);
+
+  setTimeout(() => {
+    surpriseOverlay.classList.remove('show');
+    photoReveal.classList.remove('visible');
+    heartBurst.classList.remove('open');
+    const textNode = surpriseOverlay.querySelector('.surprise-text');
+    if (textNode) textNode.textContent = 'Opening your little surprise…';
+  }, 9000);
+}
+
+surpriseBtn.addEventListener('click', triggerSurprise);
+musicToggle.addEventListener('click', toggleMusic);
+setInterval(() => hearts(2), 1800);
+updateMusicLabel(false);
+</script>
+</body>
+</html>
